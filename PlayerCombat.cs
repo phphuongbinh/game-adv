@@ -99,14 +99,14 @@ public class PlayerCombat : MonoBehaviour
         playerMovement.canMove = true;
     }
 
-    // private void OnDrawGizmos()
-    // {
-    //     Gizmos.DrawWireSphere(attackPosition.transform.position, attackRange);
-    //     if (airAttackPosition != null)
-    //     {
-    //         Gizmos.DrawWireSphere(airAttackPosition.transform.position, attackRange);
-    //     }
-    // }
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawWireSphere(attackPosition.transform.position, attackRange);
+        if (airAttackPosition != null)
+        {
+            Gizmos.DrawWireSphere(airAttackPosition.transform.position, attackRange);
+        }
+    }
 }
 
 
