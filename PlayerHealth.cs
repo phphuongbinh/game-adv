@@ -94,8 +94,13 @@ public class PlayerHealth : MonoBehaviour
         {
             StartCoroutine(Die());
         }
+    }
 
+    public void ChangeHealth(int amount)
+    {
+        Debug.Log("test");
 
+        currentHealth += amount;
     }
 
 

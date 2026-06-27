@@ -7,6 +7,8 @@ public class InventoryManager : MonoBehaviour
     public GameObject InventoryMenu;
     private bool menuActivated;
     public ItemSlot[] itemSlots;
+
+    public ItemSO[] itemSOs;
     // Start is called before the first frame update
     void Start()
     {
@@ -43,6 +45,17 @@ public class InventoryManager : MonoBehaviour
             }
         }
         return quantity;
+    }
+
+    public void UseItem(string itemName)
+    {
+        for (int i = 0; i < itemSOs.Length; i++)
+        {
+            if (itemSOs[i].itemName == itemName)
+            {
+                itemSOs[i].UseItem();
+            }
+        }
     }
 
     public void DeselectAllSlots()
